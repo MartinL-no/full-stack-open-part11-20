@@ -27,3 +27,9 @@ jobs:
         run: cd frontend && npm install
       - name: lint frontend
         run: cd frontend && npm run lint
+      - name: e2e tests
+        uses: cypress-io/github-action@v2
+        with:
+          command: de frontend & npm run test:e2e
+          start: npm run start:prod && cd frontend && npm run start
+          wait-on: http://localhost:3001
