@@ -8,7 +8,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "json-server -p3001 db.json",
-    "cypress:run": "cypress run --record",
+    "cypress:run": "cypress run --record --key 0f212929-d826-4cfb-b0d5-0908be2da14c",
     "cypress:open": "cypress open",
     "lint": "eslint ."
   },
