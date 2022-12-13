@@ -1,0 +1,19 @@
+### Create new user
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "root",
+  "name": "Superuser",
+  "password": "salainen"
+}
+
+### Create alternate user
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "testUser",
+  "name": "Test User",
+  "password": "testPassword"
+}

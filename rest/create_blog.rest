@@ -1,0 +1,11 @@
+### Create new blog by logged in user
+POST http://localhost:3003/api/blogs/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYzNGQ2YjRkOGFkMGZiYTNmNGQ4YmNmNiIsImlhdCI6MTY2NjI5MTIzMH0.lxheLvXoLqSZ2IQGDTFaEdSnkruhkMlHsqJZIOS6pNI
+
+{
+  "title": "Test Blog",
+  "author": "Test Author",
+  "url": "https://test.com/",
+  "likes": 99
+}

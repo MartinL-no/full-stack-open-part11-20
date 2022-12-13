@@ -1,0 +1,9 @@
+### Delete blog by correct user
+DELETE  http://localhost:3001/api/blogs/634d6ba88ad0fba3f4d8bd0f
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYzNGQ2YjRkOGFkMGZiYTNmNGQ4YmNmNiIsImlhdCI6MTY2NjAyMTMwN30.bMfkUq4fuZ40eTIhtYXN43LQ9V0-33H-XWZEd7VFkFE
+
+### Delete blog by incorrect user
+DELETE  http://localhost:3001/api/blogs/634d6ba98ad0fba3f4d8bd13
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RVc2VyIiwiaWQiOiI2MzRkNmFmMzhhZDBmYmEzZjRkOGJjZjMiLCJpYXQiOjE2NjYwMjE5OTN9.7WGlJZ87CqgHF_Jsun8VZHgS2E7OH_Hn2xgzgqQPj20

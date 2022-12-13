@@ -1,0 +1,11 @@
+### Replace blog
+PUT http://localhost:3003/api/blogs/6351969a006e3e77853ea63a
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYzNGQ2YjRkOGFkMGZiYTNmNGQ4YmNmNiIsImlhdCI6MTY2NjI5MTMxM30.t9RWLg-A3LsT4yr47yp7y_pisDd-KqZeJOHaBjm2cy0
+
+{
+  "title": "Test Blog",
+  "author": "Test Author",
+  "url": "https://test.com/",
+  "likes": 9999999
+}
