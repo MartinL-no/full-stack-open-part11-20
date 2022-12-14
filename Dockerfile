@@ -21,7 +21,7 @@ ENV NODE_ENV production
 
 COPY . .
 
-RUN npm install && cd frontend && npm install
+RUN npm install
 RUN cd frontend && npm install
 FROM debian:bullseye
 
