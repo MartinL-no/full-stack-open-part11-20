@@ -1,6 +1,6 @@
 FROM debian:bullseye as builder
 
-ARG NODE_VERSION=16.14.2
+ARG NODE_VERSION=16.18.1
 
 RUN apt-get update; apt install -y curl
 RUN curl https://get.volta.sh | bash
@@ -22,7 +22,6 @@ ENV NODE_ENV production
 COPY . .
 
 RUN npm install
-RUN cd frontend && npm install
 FROM debian:bullseye
 
 LABEL fly_launch_runtime="nodejs"
@@ -34,4 +33,4 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV PATH /root/.volta/bin:$PATH
 
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "run", "start-prod" ]

@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "react-scripts test",
-    "cypress:run": "cypress run --record --key 0f212929-d826-4cfb-b0d5-0908be2da14c",
+    "test:e2e": "cypress run --record --key 0f212929-d826-4cfb-b0d5-0908be2da14c",
     "cypress:open": "cypress open",
     "lint": "eslint ."
   },
