@@ -8,7 +8,7 @@ kill_timeout = 5
   release_command = "npm run build:ui"
 
 [processes]
-  app = "npm run start"
+  app = "npm run start:prod"
 
 [env]
   PORT = 8080
