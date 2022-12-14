@@ -34,7 +34,7 @@ app.get('/health', (req, res) => {
 })
 
 app.get('/version', (req, res) => {
-  res.send('-') // change this string to ensure a new version deployed
+  res.send('') // change this string to ensure a new version deployed
 })
 
 if (process.env.NODE_ENV === 'test') {
