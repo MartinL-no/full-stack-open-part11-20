@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
 
 env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
@@ -42,7 +45,25 @@ jobs:
   fly_deployment:
     needs: [pre_deployment_tasks]
     runs-on: ubuntu-20.04
+    if: |
+      github.event_name == 'push' &&
+      !contains(join(toJson(github.event.commits.*.message), ' '), '#skip')
     steps:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: flyctl deploy --remote-only
+  tag_release:
+    needs: [flyio_deployment]
+    runs-on: ubuntu-20.04
+    if: |
+      github.event_name == 'push' && 
+      !contains(join(toJson(github.event.commits.*.message), ' '), '#skip')
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@eca2b69f9e2c24be7decccd0f15fdb1ea5906598
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BUMP: patch

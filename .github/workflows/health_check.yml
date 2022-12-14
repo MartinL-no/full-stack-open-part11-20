@@ -1,0 +1,16 @@
+name: Periodic Health Check
+
+on:
+  schedule:
+    - cron: '0 9 1 1-12 *'
+
+jobs:
+  periodic_health_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v3
+        with:
+          url: https://full-stack-open-part11-20.fly.dev/health
+          max-attempts: 3
+          retry-delay: 5s
