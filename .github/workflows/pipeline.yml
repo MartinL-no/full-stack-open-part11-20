@@ -53,7 +53,7 @@ jobs:
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: flyctl deploy --remote-only
   tag_release:
-    needs: [flyio_deployment]
+    needs: [fly_deployment]
     runs-on: ubuntu-20.04
     if: |
       github.event_name == 'push' && 
