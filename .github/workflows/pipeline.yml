@@ -37,6 +37,7 @@ jobs:
         with:
           build: npm run build
           start: npm run start:test
+          command: npm run test:e2e
           wait-on: http://localhost:3001
   fly_deployment:
     runs-on: ubuntu-20.04

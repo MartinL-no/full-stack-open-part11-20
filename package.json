@@ -10,7 +10,7 @@
     "start:prod": "node index.js",
     "start:test": "cross-env NODE_ENV=test node index.js",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
-    "test:e2e": "cd frontend && npm run cypress:run",
+    "test:e2e": "cypress run --record --key 0f212929-d826-4cfb-b0d5-0908be2da14c",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "build": "rm -rf build && cd ./frontend && npm run build && cp -r build ../."
@@ -26,8 +26,9 @@
     "mongoose": "^6.5.1"
   },
   "devDependencies": {
-    "cypress": "12.1.0",
+    "cypress": "^12.1.0",
     "eslint": "^8.29.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-jest": "^27.1.6",
     "jest": "^28.1.3",
     "nodemon": "^2.0.19",
