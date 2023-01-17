@@ -19,7 +19,7 @@ From working on the project I learnt about:
 - **Adding notifications for failed deployments and periodic health checks**
 
 
-#### [LIVE LINK](https://full-stack-open-part11-20.fly.dev/) (username: testUser, password: testPassword)<br /><br />
+#### [LIVE LINK](https://full-stack-open-part11-20.fly.dev/): (username: testUser, password: testPassword)<br /><br />
 
 ## Features
 
